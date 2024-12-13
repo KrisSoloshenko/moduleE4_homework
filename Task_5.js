@@ -17,14 +17,14 @@ class ElectricalDevices{
 class DigitalDevices extends ElectricalDevices {
     constructor(name, memory) {
         super(name);
-        this.memory = memory
+        this.memory = memory;
     }
 }
 
 class LightingDevices extends ElectricalDevices { 
     constructor(name, lampType) { 
         super(name);
-        this.lampType = lampType
+        this.lampType = lampType;
     }
     
     getPosition(location) {
