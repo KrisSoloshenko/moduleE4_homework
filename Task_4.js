@@ -1,6 +1,6 @@
 function ElectricalDevices(name){
-    this.name = name
-    this.risk = 'может ударить током'
+    this.name = name;
+    this.risk = 'может ударить током';
   }
 
 ElectricalDevices.prototype.getPower = function(amperage){
@@ -13,16 +13,16 @@ ElectricalDevices.prototype.turnOn = function() {
 
 
 function DigitalDevices(name, memory) {
-  this.name = name
-  this.memorySize = memory  
+  this.name = name;
+  this.memorySize = memory;  
 }
 
-DigitalDevices.prototype = new ElectricalDevices()
+DigitalDevices.prototype = new ElectricalDevices();
 
 
 function LightingDevices(name, lampType) {
-  this.name = name
-  this.lampType = lampType
+  this.name = name;
+  this.lampType = lampType;
   this.getPosition = function(location) {
     console.log(`${this.name} установили на ${location}`);
   }  
@@ -30,8 +30,8 @@ function LightingDevices(name, lampType) {
 
 LightingDevices.prototype = new ElectricalDevices()
 
-const computer = new DigitalDevices('компьютер', 16)
+const computer = new DigitalDevices('компьютер', 16);
 
-const tableLamp = new LightingDevices('настольная лампа', 'лампа накаливания')
+const tableLamp = new LightingDevices('настольная лампа', 'лампа накаливания');
 
-const hairdryer = new ElectricalDevices('фен')
+const hairdryer = new ElectricalDevices('фен');
